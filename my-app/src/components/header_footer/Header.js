@@ -1,17 +1,6 @@
 import React, { Component } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from "reactstrap";
+import USC from "../../images/USC.png";
+import { Navbar, NavbarBrand } from "reactstrap";
 
 class Header extends Component {
   constructor(props) {
@@ -30,32 +19,16 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  GitHub
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
+        <Navbar style={{ backgroundColor: "darkred" }}>
+          <NavbarBrand>
+            <img src={USC} alt="Logo" width="150" height="80" />
+          </NavbarBrand>
+          <span
+            class="navbar-text"
+            style={{ color: "#ffffff", fontFamily: "Merriweather" }}
+          >
+            Teacher Admin Portal
+          </span>
         </Navbar>
       </div>
     );
